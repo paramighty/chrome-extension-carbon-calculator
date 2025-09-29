@@ -10,10 +10,6 @@ app.use(
 	})
 );
 const API_KEY = process.env.PAGESPEED_API_KEY;
-if (!API_KEY) {
-	console.error("ERROR: PAGESPEED_API_KEY environment variable not set");
-	process.exit(1);
-}
 
 app.get("/api/pagespeed", async (req, res) => {
 	const url = req.query.url;
