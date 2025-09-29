@@ -6,10 +6,11 @@
   "permissions": [
     "tabs"
   ],
-  "optional_host_permissions":[
-    "https://*/*",
-    "http://*/*"
-  ],
+
+  "host_permissions": [
+  "https://chrome-extension-carbon-calculator-production.up.railway.app/*",
+  "https://api.thegreenwebfoundation.org/*"
+], 
   "action": {
     "default_popup": "hello.html",
     "default_icon": "cc.png"

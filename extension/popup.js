@@ -52,7 +52,7 @@ const fetchPageSpeed = async () => {
 		// - PageSpeed API via backend server (keeps API key secure)
 		// - Green Web Foundation API directly (public API)
 		const [response, greenResponse] = await Promise.all([
-			fetch(`${process.env.API_URL}/api/pagespeed?url=${urlName}`),
+			fetch(`${import.meta.env.VITE_API_URL}/api/pagespeed?url=${urlName}`),
 			fetch(
 				`https://api.thegreenwebfoundation.org/api/v3/greencheck/${domain}`
 			),
